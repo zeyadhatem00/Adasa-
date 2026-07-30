@@ -18,7 +18,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "About", element: <About /> },
         { path: "Blog", element: <Blog /> },
-        { path: "blog/:title", element: <Blogdetails /> },
+        { path: "blog/:slug", element: <Blogdetails /> },
         { path: "*", element: <Notfound /> },
         { path: "Privacy", element: <Privacy /> },
         { path: "Terms", element: <Terms /> },
