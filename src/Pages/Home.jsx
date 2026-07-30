@@ -147,7 +147,7 @@ export default function Home() {
                   <p className="text-[18px] mb-4 md:m-0 font-normal leading-7 text-[#a1a1a1]">
                     محتوى منتقى لبدء رحلة تعلمك
                   </p>
-                  <Link to={"/Blog"} onClick={up}>
+                  <Link to={"Blog"} onClick={up}>
                     <button className="py-2.5 TAJ px-5 cursor-pointer transition-all duration-300 group hover:-translate-y-0.5 rounded-xl grad3 leading-6 font-medium text-white flex items-center gap-1">
                       {" "}
                       عرض الكل
@@ -541,7 +541,7 @@ export default function Home() {
                   <p className="text-[18px] mb-4 md:m-0 font-normal leading-7 text-[#a1a1a1]">
                     محتوى جديد طازج من المطبعة
                   </p>
-                  <Link to={"/Blog"} onClick={up}>
+                  <Link to={"Blog"} onClick={up}>
                     <button className=" TAJ cursor-pointer transition-all duration-300 group hover:text-[#ff8a05]   leading-6 font-semibold text-[#ff6a00] flex items-center gap-2">
                       {" "}
                       عرض جميع المقالات
