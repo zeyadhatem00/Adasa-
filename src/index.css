@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  font-family: "Tajawal";
+}
+
+.TAJ {
+  font-family: "Tajawal";
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.appearance {
+  animation-name: appear;
+  animation-duration: 0.5s;
+}
+
+.active {
+  background: linear-gradient(
+    to right,
+    oklch(0.705 0.213 47.604) 0%,
+    oklch(0.646 0.222 41.116) 100%
+  );
+  color: white;
+  animation-name: show;
+  animation-duration: 0.3s;
+}
+.container {
+  margin: auto;
+  max-width: 1280px;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.grad {
+  background: linear-gradient(
+    to right,
+    oklch(0.705 0.213 47.604) 0%,
+    oklch(0.646 0.222 41.116) 100%
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .active {
+    border: 1px solid #6e340e;
+    background: #2e1e14;
+    color: #ff6900;
+  }
+}
+
+@keyframes fading {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.fade {
+  animation-name: fading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.grad2 {
+  background: linear-gradient(135deg, #f97316, #fbbf24);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.grad3 {
+  background: linear-gradient(
+    to right,
+    oklch(0.705 0.213 47.604) 0%,
+    oklch(0.646 0.222 41.116) 100%
+  );
+}
+.grad33 {
+  inset: 0;
+  background: radial-gradient(
+    ellipse at right,
+    rgba(249, 116, 22, 0.132) 0%,
+    rgba(249, 116, 22, 0.059) 30%,
+    rgba(249, 115, 22, 0.08) 55%,
+    transparent 80%
+  );
+  filter: blur(110px);
+}
+.grad33l {
+  background: radial-gradient(
+    ellipse at left,
+    rgba(249, 116, 22, 0.132) 0%,
+    rgba(249, 116, 22, 0.059) 30%,
+    rgba(249, 115, 22, 0.08) 55%,
+    transparent 80%
+  );
+  filter: blur(110px);
+}
+.grad4 {
+  background: linear-gradient(135deg, rgb(249, 115, 22), rgb(251, 191, 36));
+}
+
+.grad5 {
+  background: linear-gradient(
+    to top,
+    oklab(0 0 0 / 0.6) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.gradx {
+  background: linear-gradient(
+    to top,
+    rgb(from #592d10 r g b / 0.6) 0%,
+    rgb(from #592d10 r g b / 0.3) 25%,
+    rgb(from #592d10 r g b / 0.1) 50%,
+    transparent 100%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+::selection {
+  color: white;
+  background-color: #f97316;
+}
+
+.gradabout {
+  background: linear-gradient(
+    to right bottom,
+    oklch(0.646 0.222 41.116) 0%,
+    oklch(0.705 0.213 47.604) 50%,
+    oklch(0.795 0.184 86.047) 100%
+  );
+}
