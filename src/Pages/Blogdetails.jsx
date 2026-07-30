@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import blogs from "../data/data.json";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { up } from "../Components/Nav";
 
-export function generateNumbers() {
-  const numbers = new Set();
+export default function Blogdetails() {
+  function generateNumbers() {
+    const numbers = new Set();
 
-  while (numbers.size < 3) {
-    numbers.add(Math.floor(Math.random() * blogs.length));
+    while (numbers.size < 3) {
+      numbers.add(Math.floor(Math.random() * blogs.length));
+    }
+
+    return [...numbers];
   }
 
-  return [...numbers];
-}
-
-export default function Blogdetails() {
   let [nums, setnums] = useState(generateNumbers());
+
   const { state } = useLocation();
 
   const blog = blogs.find((item) => item.id === state.id);
+
+  useEffect(() => {
+    generateNumbers();
+  });
 
   return (
     <>
@@ -212,16 +217,23 @@ export default function Blogdetails() {
                   <div>
                     {blog.content.map((content, i) => {
                       return (
-                        <a
+                        <button
                           key={i}
-                          href={`#section${i}`}
+                          onClick={() => {
+                            document
+                              .getElementById(`section${i}`)
+                              ?.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                              });
+                          }}
                           className="flex items-center gap-3 p-3 rounded-xl text-neutral-400 hover:text-orange-500 hover:bg-orange-500/5 transition-all duration-300 group"
                         >
                           <div className="flex items-center justify-center w-6 h-6 bg-[#1a1a1a] rounded-lg text-xs font-bold text-neutral-500 group-hover:bg-orange-500/10 group-hover:text-orange-500 transition-colors">
                             {i + 1}
                           </div>
                           <p className="text-sm">{content.title}</p>
-                        </a>
+                        </button>
                       );
                     })}
                   </div>

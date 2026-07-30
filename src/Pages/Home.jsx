@@ -3,10 +3,8 @@ import Nav, { up } from "../Components/Nav";
 import { Link } from "react-router-dom";
 import Blog from "./Blog";
 import blogs from "../data/data.json";
-import { generateNumbers } from "./Blogdetails";
 
 export default function Home() {
-  let [nums, setnums] = useState(generateNumbers());
   return (
     <>
       <main className=" overflow-hidden pt-20">
@@ -162,8 +160,6 @@ export default function Home() {
 
             <Link
               onClick={() => {
-                generateNumbers();
-                setnums(generateNumbers());
                 up();
               }}
               to={`/blog/${blogs[0].slug}`}
@@ -236,8 +232,6 @@ export default function Home() {
 
             <Link
               onClick={() => {
-                generateNumbers();
-                setnums(generateNumbers());
                 up();
               }}
               to={`/blog/${blogs[1].slug}`}
@@ -310,8 +304,6 @@ export default function Home() {
 
             <Link
               onClick={() => {
-                generateNumbers();
-                setnums(generateNumbers());
                 up();
               }}
               to={`/blog/${blogs[2].slug}`}
@@ -563,8 +555,6 @@ export default function Home() {
             <div className="grid md:grid-cols-2  gap-8 lg:grid-cols-3 grid-cols-1 ">
               <Link
                 onClick={() => {
-                  generateNumbers();
-                  setnums(generateNumbers());
                   up();
                 }}
                 to={`/blog/${blogs[3].slug}`}
@@ -642,8 +632,6 @@ export default function Home() {
 
               <Link
                 onClick={() => {
-                  generateNumbers();
-                  setnums(generateNumbers());
                   up();
                 }}
                 to={`/blog/${blogs[4].slug}`}
@@ -721,8 +709,6 @@ export default function Home() {
 
               <Link
                 onClick={() => {
-                  generateNumbers();
-                  setnums(generateNumbers());
                   up();
                 }}
                 to={`/blog/${blogs[5].slug}`}

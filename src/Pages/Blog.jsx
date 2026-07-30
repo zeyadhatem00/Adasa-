@@ -5,11 +5,9 @@ import Card from "../Components/Card";
 import { up } from "../Components/Nav";
 import Paination from "../Components/Paination";
 import blogs from "../data/data.json";
-import { generateNumbers } from "./Blogdetails";
 
 export default function Blog() {
   let [filteredBlogs, setfilter] = useState(structuredClone(blogs));
-  let [nums, setnums] = useState(generateNumbers());
   const [currentpage, setcurrentpage] = useState(1);
   const [cardsperpage, setcardsperpage] = useState(6);
 
@@ -268,11 +266,6 @@ export default function Blog() {
               {currentcards.map((blog, i) => {
                 return (
                   <Link
-                    onClick={() => {
-                      generateNumbers();
-                      setnums(generateNumbers());
-                      up();
-                    }}
                     to={`/blog/${blog.slug}`}
                     state={{ id: blog.id }}
                     key={blog.id}
