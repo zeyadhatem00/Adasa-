@@ -3,7 +3,7 @@
 **Adasa (عدسة)** is an Arabic, right-to-left photography magazine application. It presents practical photography guidance in a responsive reading experience, from the home page and featured articles to searchable article listings and detailed reading pages.
 The interface is designed for Arabic readers, with RTL layout and photography-focused navigation throughout.
 
-[View the live demo](https://adasa-beta-amber.vercel.app) · [Open the repository](https://github.com/zeyadhatem00/Adasa-)
+[View the live demo](https://adasa-beta-amber.vercel.app) · [Open the repository](https://github.com/zeyadhatem00/adasa)
 
 ## Features
 
@@ -25,7 +25,7 @@ The lockfile records Vite's Node engine requirement as **Node.js `^20.19.0 || >=
 ## Getting started
 
 ```bash
-git clone https://github.com/zeyadhatem00/Adasa-.git
+git clone https://github.com/zeyadhatem00/adasa.git
 cd Adasa-
 npm ci
 npm run dev
